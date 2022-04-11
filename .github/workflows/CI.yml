@@ -44,7 +44,7 @@ jobs:
         run: msbuild WPFUI.sln -p:Configuration=Release -m
 
       - name: Publish net60
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         id: publish_net6
         with:
           name: WPFUI-NET6
@@ -52,7 +52,7 @@ jobs:
             WPFUI/bin/Release/net6.0-windows
 
       - name: Publish net50
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         id: publish_net5
         with:
           name: WPFUI-NET5
@@ -60,14 +60,14 @@ jobs:
             WPFUI/bin/Release/net5.0-windows
 
       - name: Publish net48
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: WPFUI-NET48
           path: |
             WPFUI/bin/Release/net48
 
       - name: Publish nupkg
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: WPFUI-NUPKG
           path: |
